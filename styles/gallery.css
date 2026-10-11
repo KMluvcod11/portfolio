@@ -1,0 +1,99 @@
+/* แกลเลอรี Facecheck */
+.facecheck-gallery>p {
+  max-width:760px
+}
+
+.facecheck-gallery section {
+  margin-top:64px
+}
+
+.facecheck-gallery h2 {
+  font-size:32px
+}
+
+.screens-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px
+}
+
+.screens-grid figure {
+  margin:0;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden
+}
+
+.screens-grid img {
+  display:block;
+  width:100%;
+  height:300px;
+  object-fit:contain;
+  background:#f8fafc
+}
+
+.screens-grid figcaption {
+  padding:18px
+}
+
+.screens-grid figcaption strong {
+  display:block;
+  font-size:16px
+}
+
+.screens-grid figcaption span {
+  display:block;
+  margin-top:6px;
+  font-size:12px;
+  color:var(--muted)
+}
+
+.project-copy h3+.button {
+  font-size:12px;
+  margin-bottom:14px;
+  padding:10px 14px
+}
+
+@media(max-width:600px) {
+  .screens-grid {
+    grid-template-columns:1fr
+  }
+
+  .screens-grid img {
+    height:250px
+  }
+
+  .facecheck-gallery h1 {
+    font-size:36px
+  }
+
+}
+
+.facecheck-app-preview { background:#36251c; }
+.facecheck-app-preview img { width:100%; object-fit:contain; }
+
+/* Keep the two remaining project cards balanced. */
+.project-grid > .project {
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+.project-grid .project-screenshot img {
+  height:300px;
+}
+.project-grid .project-copy {
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  align-items:flex-start;
+  padding:30px;
+}
+.project-grid .project-copy > details {
+  width:100%;
+  margin-top:auto;
+}
+@media(max-width:600px) {
+  .project-grid .project-screenshot img { height:250px; }
+  .project-grid .project-copy { padding:24px; }
+}

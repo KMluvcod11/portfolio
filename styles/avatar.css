@@ -1,0 +1,81 @@
+/* ตัวละครและตำแหน่งดวงตา */
+.avatar-art {
+  position:relative;
+  width:125%;
+  margin-left:-12.5%;
+  isolation:isolate
+}
+
+.avatar-art>img {
+  display:block;
+  width:100%;
+  height:auto;
+  mask-image:linear-gradient(#000 93%,transparent 100%)
+}
+
+.mascot .avatar-eyes {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  margin:0;
+  transform:none;
+  pointer-events:none
+}
+
+.eye-pupil {
+  transform:translate(var(--eye-x,0px),var(--eye-y,0px));
+  transition:transform 90ms ease-out
+}
+
+.avatar .tag-one {
+  top:65%;
+  left:0
+}
+
+.avatar .tag-two {
+  bottom:10%;
+  right:-5%
+}
+
+@media(max-width:600px) {
+  .avatar {
+    margin:0 auto 15px
+  }
+
+  .avatar-art {
+    width:100%;
+    margin-left:0
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .eye-pupil {
+    transition:none
+  }
+
+}
+
+@media(max-width:600px) {
+  .hero-role {
+    align-items:center
+  }
+
+  .hero-role h2 {
+    font-size:25px;
+    flex:1;
+    min-width:0
+  }
+
+  .hero-role h2 br {
+    display:block
+  }
+
+  .hero-role>p {
+    flex:1;
+    min-width:0;
+    max-width:140px
+  }
+
+}
